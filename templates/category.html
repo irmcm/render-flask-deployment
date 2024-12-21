@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ category }} - Ürünler</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>{{ category }}</h1>
+        <div class="search-container">
+            <form action="/search" method="get">
+                <input
+                    type="text"
+                    name="query"
+                    class="search-bar"
+                    placeholder="Aradığınız ürünü yazınız"
+                    required
+                />
+                <button type="submit" class="search-button">Ara</button>
+            </form>
+        </div>
+        <a href="/" class="search-button">Anasayfaya Dön</a>
+    </header>
+
+    <section class="product-grid">
+        {% for product in products %}
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/static/images/{{ product.image }}" alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h3>Ürün No: {{ product.id }}</h3>
+                <p>{{ product.description }}</p>
+                <p><strong>{{ product.price }} TL</strong></p>
+                <p>Kategori: {{ product.category }}</p>
+                <a href="/product/{{ product.id }}" class="details-link">Ürün Detayı</a>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>

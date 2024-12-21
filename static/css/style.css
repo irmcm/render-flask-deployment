@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #f3720c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Ana Sayfa */
+.bestsellers {
+    padding: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    background-color: white;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.details-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #f3720c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Ürün Detayı Sayfası */
+.product-detail {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px; 
+    flex-wrap: wrap;
+}
+
+.product-detail .product-image img {
+    max-width: 400px; 
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.product-detail .product-details {
+    max-width: 500px; 
+    text-align: left;
+}
+
+.product-detail .product-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-detail .product-details p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.product-detail .product-details strong {
+    font-size: 20px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    list-style: none;
+    padding: 0;
+    background-color: #f8f8f8;
+    margin: 10px 20px;
+}
+
+.breadcrumb li {
+    display: inline;
+    margin-right: 5px;
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: #f3720c;
+}
+
+.breadcrumb li::after {
+    content: ">";
+    margin-left: 5px;
+}
+
+.breadcrumb li:last-child::after {
+    content: "";
+}
+
+.search-results h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-results p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #f3720c;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: -1px; 
+}
+
+.search-button:hover {
+    background-color: #d8600a;
+}
+
+.search-container input:focus {
+    border-color: #f3720c;
+    box-shadow: 0 0 5px rgba(243, 114, 12, 0.5);
+}

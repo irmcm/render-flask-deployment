@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Alışveriş Sitesi{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Alışveriş Sitesi</h1>
+        <div class="search-container">
+            <form action="/search" method="get">
+                <input
+                    type="text"
+                    name="query"  
+                    class="search-bar"
+                    placeholder="Aradığınız ürünü yazınız"
+                    value="{{ query }}"  
+                />
+                <button type="submit" class="search-button">Ara</button>
+            </form>
+            <a href="/" class="search-button">Anasayfaya Dön</a>
+        </div>
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

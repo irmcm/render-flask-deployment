@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.description }} - Ürün Detayı</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    {% extends "base.html" %}
+
+    {% block title %}Ürün Detayı{% endblock %}
+
+    {% block content %}
+    <!-- Breadcrumb  -->
+    <nav>
+        <ul class="breadcrumb">
+            <li><a href="/">Ana Sayfa</a></li>
+            <li><a href="/category/{{ product.category }}">{{ product.category }}</a></li>
+            <li>{{ product.description }}</li>
+        </ul>
+    </nav>
+
+    <div class="product-detail">
+        <div class="product-image">
+            <img src="/static/images/{{ product.image }}" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <p><strong>{{ product.description }}</strong></p>
+            <p>{{ product.price }} TL</p>
+            <p>Kategori: {{ product.category }}</p>
+        </div>
+    </div>
+    
+    {% endblock %}  
+</body>
+</html>
